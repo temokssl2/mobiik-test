@@ -1,96 +1,51 @@
-# Mobiik Automation Framework
+Mobiik Automation Framework
+Este proyecto es un framework de pruebas automatizadas para la aplicación web TodoMVC utilizando Selenium WebDriver y Mocha.
 
-This project is an automated test framework for the TodoMVC web app using Selenium WebDriver and Mocha.
+Requisitos previos
+Node.js (se recomienda la versión 14 o superior)
 
-## Prerequisites
+npm
 
-- [Node.js](https://nodejs.org/) (v14 or higher recommended)
-- [npm](https://www.npmjs.com/)
-- Google Chrome or Mozilla Firefox browser
+Navegador Google Chrome o Mozilla Firefox
 
-## Setup
+Configuración
+Clonar el repositorio
 
-1. **Clone the repository**
-   ```sh
-   git clone https://github.com/temokssl2/mobiik-test.git
-   cd mobiik-test
-   ```
+git clone https://github.com/temokssl2/mobiik-test.git
+cd mobiik-test
 
-2. **Install dependencies**
-   ```sh
-   npm install
-   ```
+Instalar dependencias
 
-## Running the Tests
+npm install
 
-1. **Run all tests**
-   ```sh
-   npm test
-   ```
+Ejecutar las pruebas
+Ejecutar todas las pruebas
 
-2. **View the test report**
-   - After running, open `mochawesome-report/mochawesome.html` in your browser to see the results.
+npm test
 
-## Project Structure
+Ver el reporte de pruebas
 
-- `test/` - Test files (main entry: `TodoMvcTest.js`)
-- `Pages/` - Page Object Models
-- `utils/` - Utility classes (e.g., SeleniumActions)
-- `screenshots/` - Screenshots on test failure
+Después de ejecutar las pruebas, abre mochawesome-report/mochawesome.html en tu navegador para ver los resultados.
 
-## Notes
+Estructura del proyecto
+test/ - Archivos de prueba (archivo principal: TodoMvcTest.js)
 
-- You can change the browser or test settings in the configuration files.
-- Make sure your browser drivers (`chromedriver`, `geckodriver`) are installed via npm.
+Pages/ - Modelos de objetos de página (Page Object Models)
 
----
-```# Mobiik Automation Framework
+utils/ - Clases utilitarias (por ejemplo, SeleniumActions)
 
-This project is an automated test framework for the TodoMVC web app using Selenium WebDriver and Mocha.
+screenshots/ - Capturas de pantalla en caso de fallo de pruebas
 
-## Prerequisites
+Notas
+Puedes cambiar el navegador o la configuración de las pruebas en los archivos de configuración.
 
-- [Node.js](https://nodejs.org/) (v14 or higher recommended)
-- [npm](https://www.npmjs.com/)
-- Google Chrome or Mozilla Firefox browser
+Asegúrate de que los controladores del navegador (chromedriver, geckodriver) estén instalados a través de npm.
 
-## Setup
+Notas adicionales
+Todas las dependencias necesarias, incluyendo Selenium WebDriver y los controladores de navegador (chromedriver, geckodriver), están listadas en package.json.
 
-1. **Clone the repository**
-   ```sh
-   git clone https://github.com/temokssl2/mobiik-test.git
-   cd mobiik-test
-   ```
+Si necesitas instalarlas manualmente en algún momento, ejecuta:
 
-2. **Install dependencies**
-   ```sh
-   npm install
-   ```
+npm install selenium-webdriver chromedriver geckodriver
 
-## Running the Tests
-
-1. **Run all tests**
-   ```sh
-   npm test
-   ```
-
-2. **View the test report**
-   - After running, open `mochawesome-report/mochawesome.html` in your browser to see the results.
-
-## Project Structure
-
-- `test/` - Test files (main entry: `TodoMvcTest.js`)
-- `Pages/` - Page Object Models
-- `utils/` - Utility classes (e.g., SeleniumActions)
-- `screenshots/` - Screenshots on test failure
-
-## Notes
-
-## Notes
-
-- All required dependencies, including Selenium WebDriver and browser drivers (`chromedriver`, `geckodriver`), are listed in `package.json`.
-- If you ever need to install them manually, run:
-  ```sh
-  npm install selenium-webdriver chromedriver geckodriver
-  ```
-- Running `npm install` in the project directory will install
+Ejecutar npm install en el directorio del proyecto instalará todas las dependencias necesarias.
