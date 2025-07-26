@@ -1,51 +1,51 @@
-Mobiik Automation Framework
-Este proyecto es un framework de pruebas automatizadas para la aplicación web TodoMVC utilizando Selenium WebDriver y Mocha.
+# Mobiik Automation Framework
 
-Requisitos previos
-Node.js (se recomienda la versión 14 o superior)
+Este proyecto es un framework de pruebas automatizadas para la aplicación web TodoMVC usando Selenium WebDriver y Mocha.
 
-npm
+## Prerrequisitos
 
-Navegador Google Chrome o Mozilla Firefox
+- [Node.js](https://nodejs.org/) (v14 o superior recomendado)
+- [npm](https://www.npmjs.com/)
+- Navegador Google Chrome o Mozilla Firefox
 
-Configuración
-Clonar el repositorio
+## Configuración
 
-git clone https://github.com/temokssl2/mobiik-test.git
-cd mobiik-test
+1. **Clona el repositorio**
+   ```sh
+   git clone https://github.com/temokssl2/mobiik-test.git
+   cd mobiik-test
+   ```
 
-Instalar dependencias
+2. **Instala las dependencias**
+   ```sh
+   npm install
+   ```
 
-npm install
+## Ejecución de las pruebas
 
-Ejecutar las pruebas
-Ejecutar todas las pruebas
+1. **Ejecuta todas las pruebas**
+   ```sh
+   npm test
+   ```
 
-npm test
+2. **Ver el reporte de pruebas**
+   - Después de ejecutar, abre `mochawesome-report/mochawesome.html` en tu navegador para ver los resultados.
 
-Ver el reporte de pruebas
+## Estructura del proyecto
 
-Después de ejecutar las pruebas, abre mochawesome-report/mochawesome.html en tu navegador para ver los resultados.
+- `test/` - Archivos de prueba (principal: `TodoMvcTest.js`)
+- `Pages/` - Modelos de página (Page Object Models)
+- `utils/` - Clases utilitarias (por ejemplo, SeleniumActions)
+- `screenshots/` - Capturas de pantalla en caso de fallo
 
-Estructura del proyecto
-test/ - Archivos de prueba (archivo principal: TodoMvcTest.js)
+## Notas
 
-Pages/ - Modelos de objetos de página (Page Object Models)
+- Puedes cambiar el navegador o la configuración de las pruebas en los archivos de configuración.
+- Todas las dependencias necesarias, incluyendo Selenium WebDriver y los drivers de navegador (`chromedriver`, `geckodriver`), están listadas en `package.json`.
+- Si necesitas instalarlas manualmente, ejecuta:
+  ```sh
+  npm install selenium-webdriver chromedriver geckodriver
+  ```
+- Ejecutar `npm install` en el directorio del proyecto instalará todas las dependencias requeridas.
 
-utils/ - Clases utilitarias (por ejemplo, SeleniumActions)
-
-screenshots/ - Capturas de pantalla en caso de fallo de pruebas
-
-Notas
-Puedes cambiar el navegador o la configuración de las pruebas en los archivos de configuración.
-
-Asegúrate de que los controladores del navegador (chromedriver, geckodriver) estén instalados a través de npm.
-
-Notas adicionales
-Todas las dependencias necesarias, incluyendo Selenium WebDriver y los controladores de navegador (chromedriver, geckodriver), están listadas en package.json.
-
-Si necesitas instalarlas manualmente en algún momento, ejecuta:
-
-npm install selenium-webdriver chromedriver geckodriver
-
-Ejecutar npm install en el directorio del proyecto instalará todas las dependencias necesarias.
+---
