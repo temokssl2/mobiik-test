@@ -1,0 +1,23 @@
+{
+  "name": "mobiik-automation-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter mochawesome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "selenium-webdriver": "^4.34.0"
+  },
+  "devDependencies": {
+    "chai": "^5.2.1",
+    "chromedriver": "^138.0.4",
+    "geckodriver": "^5.0.0",
+    "mkdirp": "^3.0.1",
+    "mocha": "^11.7.1",
+    "mochawesome": "^7.1.3"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-26T21:15:29.414Z",
+    "end": "2025-07-26T21:15:32.786Z",
+    "duration": 3372,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2f9b0927-eab9-4e77-9eb8-99ff6dcb125d",
+      "title": "",
+      "fullFile": "C:\\Users\\TemoatzinLopezSosa\\mobiik-automation-framework\\test\\TodoMvcTest.js",
+      "file": "\\test\\TodoMvcTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f9b9fbb8-c254-43e3-ba26-31b0d28e5a82",
+          "title": "Mobiik TodoMVC Test",
+          "fullFile": "C:\\Users\\TemoatzinLopezSosa\\mobiik-automation-framework\\test\\TodoMvcTest.js",
+          "file": "\\test\\TodoMvcTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Mobiik TodoMVC Test\"",
+              "fullTitle": "Mobiik TodoMVC Test \"before all\" hook in \"Mobiik TodoMVC Test\"",
+              "timedOut": false,
+              "duration": 1858,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await Hooks.globalSetup(this);\ndriver = this.driver;\nseleniumActions = this.seleniumActions;\ntodoPage = new TodoMvcPage(seleniumActions);",
+              "err": {},
+              "uuid": "51bc0fb5-d569-4b4b-9b32-89ea4ecdfbe1",
+              "parentUUID": "f9b9fbb8-c254-43e3-ba26-31b0d28e5a82",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Mobiik TodoMVC Test\"",
+              "fullTitle": "Mobiik TodoMVC Test \"after all\" hook in \"Mobiik TodoMVC Test\"",
+              "timedOut": false,
+              "duration": 109,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await Hooks.globalTeardown(this);",
+              "err": {},
+              "uuid": "74a06472-b161-48d9-8735-a42dc232a90a",
+              "parentUUID": "f9b9fbb8-c254-43e3-ba26-31b0d28e5a82",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook in \"Mobiik TodoMVC Test\"",
+              "fullTitle": "Mobiik TodoMVC Test \"after each\" hook in \"Mobiik TodoMVC Test\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await Hooks.afterEach(this, this.currentTest);",
+              "err": {},
+              "uuid": "bb573308-f1f8-4773-9533-eee70305d206",
+              "parentUUID": "f9b9fbb8-c254-43e3-ba26-31b0d28e5a82",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should create a todo",
+              "fullTitle": "Mobiik TodoMVC Test should create a todo",
+              "timedOut": false,
+              "duration": 1396,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let todoMvcUrlPage = 'https://demo.playwright.dev/todomvc/#/';\nawait seleniumActions.navigateTo(todoMvcUrlPage);\nawait seleniumActions.waitForCondition(() => todoPage.isDisplayed());\nconst tasksList = [];\nconst completedTasks = [];\nfor(let i = 0; i < 5; i++) {\n    tasksList.push(`Task ${i + 1}`);\n    await todoPage.createANewTask(tasksList[i]);\n}\nfor(let i = 0; i < 2; i++) {\n    completedTasks.push(tasksList[i]);\n    await todoPage.completeTask(tasksList[i]);\n}\nawait todoPage.displayCompletedTasks();\nlet areCompletedTasksCorrect = await todoPage.areCompletedTasksCorrect(completedTasks);\nassert.strictEqual(areCompletedTasksCorrect, true, 'Completed tasks are not correct, not all the completed tasks are displayed');",
+              "err": {},
+              "uuid": "a36368e2-bf99-4923-86ed-051e0ae53d03",
+              "parentUUID": "f9b9fbb8-c254-43e3-ba26-31b0d28e5a82",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a36368e2-bf99-4923-86ed-051e0ae53d03"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1396,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 40000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
